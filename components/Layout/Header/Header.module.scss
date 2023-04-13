@@ -1,0 +1,196 @@
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-2deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(3deg);
+  }
+  30% {
+    transform: translate(0px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(2px, 1px) rotate(-2deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(4deg);
+  }
+  90% {
+    transform: translate(2px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+div.header {
+  display: grid;
+  grid-template-columns: 30% 45% 30%;
+  border-bottom: 1px solid #00000036;
+  height: 12vh;
+  width: 80%;
+  margin: auto;
+  img {
+    width: 60px;
+    display: block;
+    margin: auto;
+    margin-left: 5px;
+  }
+
+  div.components {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      font-size: 20px;
+      padding-right: 20px;
+    }
+  }
+  div.telephone {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 80px;
+    i {
+      font-size: 20px;
+      margin-right: 10px;
+      color: rgba(0, 0, 0, 0.671);
+    }
+    p {
+      font-size: 18px;
+      &:hover {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  div.header {
+    img {
+      width: 60px;
+      display: block;
+      margin: auto;
+      margin-left: 5px;
+    }
+
+    div.components {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        font-size: 20px;
+        padding-right: 20px;
+      }
+    }
+    div.telephone {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-right: 80px;
+      i {
+        font-size: 20px;
+        margin-right: 10px;
+        color: rgba(0, 0, 0, 0.671);
+      }
+      p {
+        font-size: 18px;
+        &:hover {
+          border-bottom: 1px solid black;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1250px) {
+  div.header {
+    width: 100%;
+    img {
+      width: 50px;
+    }
+
+    div.components {
+      a {
+        font-size: 16px;
+        padding-right: 20px;
+      }
+    }
+    div.telephone {
+      i {
+        font-size: 15px;
+      }
+      p {
+        font-size: 12px;
+        &:hover {
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  div.tel_header {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 25% 50% 25%;
+    margin-bottom: 10px;
+
+    img {
+      margin: 10px;
+      margin-bottom: 0px;
+      width: 40px;
+      margin-left: 20px;
+    }
+
+    div.tel_components {
+      margin-top: 20px;
+      margin-left: 20px;
+
+      text-align: center;
+
+      a {
+        font-size: 16px;
+        padding-right: 20px;
+        color: rgb(79, 94, 79);
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    div.tel_telephone {
+      i {
+        margin-top: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+      p {
+        font-size: 12px;
+        &:hover {
+        }
+      }
+    }
+  }
+}

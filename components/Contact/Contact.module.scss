@@ -1,0 +1,204 @@
+div.page {
+  padding-top: 20px;
+  background-color: rgba(230, 221, 221, 0.238);
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(12, 14, 15, 0.4),
+      rgba(53, 58, 77, 0.4)
+    ),
+    url(/contactBackground.jpg);
+  background-position: 70% 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  margin-bottom: -70px;
+  div.container {
+    width: 65%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 150px;
+    padding-top: 10px;
+    border: 2px solid rgba(58, 123, 147, 0.3);
+    background: rgba(255, 255, 255, 0.668);
+    div.contact {
+      padding-top: 10px;
+      h5 {
+        font-weight: 300;
+      }
+      main {
+        form {
+          display: flex;
+          flex-direction: column;
+          div.inputs {
+            div.name {
+              display: grid;
+              grid-template-columns: 50% 50%;
+
+              input {
+                width: 95%;
+                border: 1px solid grey;
+                opacity: 70%;
+                border-radius: 5px;
+                outline: none;
+                margin: 10px;
+                height: 50px;
+                margin-left: 0px;
+              }
+            }
+            textarea.bigtext {
+              width: 97.5%;
+              height: 222.5px;
+              resize: none;
+              opacity: 90%;
+            }
+          }
+          div.Button {
+            width: 97.5%;
+            margin-top: 10px;
+            button {
+              display: block;
+              margin: auto;
+              padding: 15px 40px 15px 40px;
+              background-color: #556cd6;
+              border-radius: 4px;
+              color: white;
+              border: 0;
+              font-weight: 600;
+              cursor: pointer;
+              transition: all 0.2s ease;
+              box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+    }
+    div.map {
+      margin-top: 5vh;
+    }
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  div.page {
+    background-color: rgba(230, 221, 221, 0.238);
+    height: 100%;
+    background-image: linear-gradient(
+        rgba(12, 14, 15, 0.4),
+        rgba(53, 58, 77, 0.4)
+      ),
+      url(/contactBackground.jpg);
+    background-position: 70% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    margin-bottom: -70px;
+
+    div.container {
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      padding: 30px;
+      border-radius: 20px;
+      margin-top: 30px;
+      padding-top: 10px;
+      border: 2px solid rgba(58, 123, 147, 0.3);
+      background: rgba(255, 255, 255, 0.668);
+      div.contact {
+        padding-top: 10px;
+        header {
+          h1 {
+            text-align: center;
+          }
+        }
+        h5 {
+          text-align: center;
+          font-weight: 300;
+        }
+        main {
+          display: grid;
+          div.name {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            input {
+            }
+          }
+          input {
+            border: 1px solid grey;
+            opacity: 70%;
+            border-radius: 5px;
+            outline: none;
+            margin: 20px;
+            height: 50px;
+            margin-left: 0px;
+          }
+        }
+      }
+      div.map {
+        width: 100%;
+        margin: auto;
+        padding-top: 20px;
+        padding-right: 35px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  div.page {
+    height: 100%;
+
+    div.container {
+      width: 95%;
+      padding: 10px;
+      div.contact {
+        header {
+          padding: 5px;
+          margin: 0px;
+          h1 {
+            text-align: center;
+            font-size: 30px;
+            margin: 0px;
+          }
+        }
+        h5 {
+          margin: 0px;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        main {
+          padding: 5px;
+          div.name {
+            grid-template-columns: 48% 4% 48%;
+            input {
+            }
+          }
+          input {
+            padding: 5px;
+
+            margin-left: 0px;
+            width: 100%;
+          }
+        }
+      }
+      div.map {
+        width: 100%;
+        margin: auto;
+        padding-top: 0px;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  div.page {
+    height: 100%;
+  }
+}

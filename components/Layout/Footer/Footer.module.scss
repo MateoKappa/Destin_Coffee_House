@@ -1,0 +1,48 @@
+div.page {
+  width: 80%;
+  height: 20vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  background-color: rgb(246, 246, 246);
+  margin-top: 150px;
+
+  img {
+    display: flex;
+    width: 100px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  div.left {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    text-align: center;
+  }
+  div.right {
+    text-align: center;
+
+    padding-left: 20px;
+
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  div.page {
+    margin-top: -50px;
+    width: 98%;
+    img {
+      width: 60px;
+    }
+    div.left {
+      font-size: 12px;
+    }
+    div.right {
+      font-size: 12px;
+    }
+  }
+}
