@@ -36,6 +36,8 @@ class Map extends React.Component {
     });
 
     data.forEach((location) => {
+      map.resize();
+
       console.log(location);
       var marker = new mapboxgl.Marker()
         .setLngLat(location.coordinates)
@@ -50,12 +52,7 @@ class Map extends React.Component {
 
   render() {
     return (
-      <div className={styles.page}>
-        <div
-          className={styles.mapstyle}
-          ref={(el) => (this.mapContainer = el)}
-        />
-      </div>
+      <div className={styles.mapstyle} ref={(el) => (this.mapContainer = el)} />
     );
   }
 }

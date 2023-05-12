@@ -1,9 +1,9 @@
 import styles from "./Header.module.scss";
 import useWindowSize from "../../Window/window";
-import {useState} from "react";
+import { useState } from "react";
 
 function Header() {
-  const {height, width} = useWindowSize();
+  const { height, width } = useWindowSize();
   const [shake, setShake] = useState(false);
 
   const animate = () => {
@@ -22,7 +22,6 @@ function Header() {
             <a href="/">Home </a>
             <a href="/menu">Menu </a>
             <a href="/contact">Contact us </a>
-            <a href="/about">About us</a>
           </div>
           <div className={styles.telephone}>
             <i className="fa-solid fa-phone" /> <p> +30 2421 182038</p>
@@ -43,9 +42,6 @@ function Header() {
             </a>
             <a href="/contact">
               <i className="fa-solid fa-envelope"></i>
-            </a>
-            <a href="/about">
-              <i className="fa-solid fa-images"></i>
             </a>
           </div>
           <div className={styles.tel_telephone}>

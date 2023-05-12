@@ -52,12 +52,13 @@ div.container {
   margin-top: 80px;
   animation-duration: 250ms;
   overflow: hidden;
-
+  margin: auto;
   div.first_column {
     width: 75%;
     display: grid;
     grid-template-columns: 70% 30%;
     margin: auto;
+    margin-top: 40px;
 
     div.title {
       h1 {
@@ -79,7 +80,7 @@ div.container {
       display: flex;
       object-fit: cover;
       color: white;
-      width: 30vw;
+      width: 25vw;
       position: relative;
       box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
     }

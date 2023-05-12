@@ -5,7 +5,6 @@ div.page {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   background-color: rgb(246, 246, 246);
-  margin-top: 100px;
 
   img {
     display: flex;
@@ -23,9 +22,7 @@ div.page {
   }
   div.right {
     text-align: center;
-
     padding-left: 20px;
-
     display: flex;
     align-items: center;
   }
@@ -33,7 +30,6 @@ div.page {
 
 @media screen and (max-width: 900px) {
   div.page {
-    margin-top: -50px;
     width: 98%;
     img {
       width: 60px;

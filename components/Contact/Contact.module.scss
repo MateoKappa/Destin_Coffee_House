@@ -1,5 +1,4 @@
 div.page {
-  padding-top: 20px;
   background-color: rgba(230, 221, 221, 0.238);
   height: 100vh;
   background-image: linear-gradient(
@@ -11,7 +10,6 @@ div.page {
   background-repeat: no-repeat;
   background-size: cover;
   margin: auto;
-  margin-bottom: -70px;
   div.container {
     width: 65%;
     display: grid;
@@ -19,10 +17,10 @@ div.page {
     margin: auto;
     padding: 30px;
     border-radius: 20px;
-    margin-top: 150px;
     padding-top: 10px;
     border: 2px solid rgba(58, 123, 147, 0.3);
     background: rgba(255, 255, 255, 0.668);
+
     div.contact {
       padding-top: 10px;
       h5 {
@@ -97,7 +95,6 @@ div.page {
     background-repeat: no-repeat;
     background-size: cover;
     margin: auto;
-    margin-bottom: -70px;
 
     div.container {
       width: 85%;

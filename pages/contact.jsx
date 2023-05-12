@@ -1,9 +1,9 @@
-import Contact from "../components/Contact/Contact";
+import Contact1 from "../components/Contact1/Contact";
 
 export default function login() {
   return (
     <div>
-      <Contact />
+      <Contact1 />
     </div>
   );
 }
