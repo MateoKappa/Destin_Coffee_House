@@ -15,7 +15,7 @@ const data = [
   },
 ];
 
-class Mapp extends React.Component {
+class Map extends React.Component {
   // Set up states for updating map
   constructor(props) {
     super(props);
@@ -40,7 +40,7 @@ class Mapp extends React.Component {
       var marker = new mapboxgl.Marker()
         .setLngLat(location.coordinates)
         .setPopup(
-          new mapboxgl.Popup({offset: 30}).setHTML(
+          new mapboxgl.Popup({ offset: 30 }).setHTML(
             "<h4>" + location.city + "</h4>" + location.location
           )
         )
@@ -60,4 +60,4 @@ class Mapp extends React.Component {
   }
 }
 
-export default Mapp;
+export default Map;

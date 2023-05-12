@@ -2,8 +2,8 @@ import Head from "next/head";
 import styles from "./Layout.module.scss";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer.jsx";
-import {useRouter} from "next/router";
-const Layout = ({children}) => {
+import { useRouter } from "next/router";
+const Layout = ({ children }) => {
   const router = useRouter();
   console.log(router);
 
@@ -31,7 +31,7 @@ const Layout = ({children}) => {
         />
       </Head>
       <Header />
-      <main className={styles.main}>{children}</main>
+      <main className={styles.main}>{children}</main> <Footer />
     </div>
   );
 };
