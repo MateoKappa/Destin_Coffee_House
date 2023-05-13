@@ -1,10 +1,9 @@
+import React from "react";
 import styles from "./Contact.module.scss";
-import {motion} from "framer-motion";
 import Map from "../Map";
 import emailjs from "emailjs-com";
-import {useState, useRef} from "react";
-
-export default function Contact() {
+import { useState, useRef } from "react";
+function Contact2() {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -18,53 +17,61 @@ export default function Contact() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          alert("Email sent successfully!");
         },
         (error) => {
           console.log(error.text);
         }
       );
-    e.target.reset();
   };
   return (
-    <motion.div
-      className={styles.page}
-      intial={{opacity: 0}}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
-    >
-      <div className={styles.container}>
-        <div className={styles.contact}>
-          <header>
-            <h1>Επικοινωνήστε μαζι μας!</h1>
-          </header>
-          <h5>Ρωτήστε μας/Ενημερώστε μας για οτιδήποτε σας απασχολεί!</h5>
-          <main>
-            <form ref={form} onSubmit={sendEmail}>
-              <div className={styles.inputs}>
-                <div className={styles.name}>
-                  <input placeholder="Name" name="name" />
-                  <input placeholder="Surname" name="surname" />
+    <div className={styles.Page}>
+      <div className={styles.Components}>
+        <div className={styles.Contact}>
+          <h1> Επικοινωνηστε Μαζι Μας!</h1>
+          <h3>Μιληστε μαζι μας μεσω email!</h3>
+          <form ref={form} onSubmit={sendEmail} className={styles.Inputs}>
+            <div className={styles.FullName}>
+              {" "}
+              <div className={styles.InputContainer}>
+                <h4>First Name</h4>
+                <input placeholder="First Name" type="text" name="name" />
+              </div>
+              <div className={styles.InputContainer}></div>
+              <div className={styles.InputContainer}>
+                <h4>Last Name</h4>
+                <input placeholder="Last Name" name="surname" />
+              </div>
+            </div>
+            <div className={styles.Email}>
+              <h4>Email</h4>
+              <input type="email" placeholder="You@email.com" name="email" />
+            </div>
 
-                  <input placeholder="Your Email" type="email" name="email" />
-                  <input placeholder="phone" name="phone" />
-                </div>
-                <textarea
-                  placeholder=""
-                  name="Text"
-                  className={styles.bigtext}
-                />
-              </div>
-              <div className={styles.Button}>
-                <button type="submit">Sumbit</button>
-              </div>
-            </form>
-          </main>
+            <div className={styles.Phone}>
+              <h4>Phone Number</h4>
+              <input type="tel" placeholder="+30 69** *** ***" name="phone" />
+            </div>
+            <div className={styles.BigText}>
+              <h4>Message</h4>
+              <textarea
+                placeholder=""
+                name="message"
+                className={styles.bigtext}
+              />
+            </div>
+            <div className={styles.Button}>
+              {" "}
+              <button type="submit">Sumbit</button>
+            </div>
+          </form>
         </div>
-        <div className={styles.map}>
+        <div className={styles.Map}>
           <Map />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
+
+export default Contact2;

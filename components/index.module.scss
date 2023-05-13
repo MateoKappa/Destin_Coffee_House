@@ -50,10 +50,9 @@
 
 div.container {
   margin-top: 80px;
-  animation-duration: 250ms;
   overflow: hidden;
   margin: auto;
-  div.first_column {
+  section.first_column {
     width: 75%;
     display: grid;
     grid-template-columns: 70% 30%;
@@ -85,7 +84,7 @@ div.container {
       box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
     }
   }
-  div.second_column {
+  section.second_column {
     background-color: rgba(19, 18, 18, 0.945);
     div.full_stats {
       width: 85%;
@@ -182,7 +181,7 @@ div.container {
       }
     }
   }
-  div.third_column {
+  section.third_column {
     width: 85%;
     margin: auto;
     display: grid;
@@ -258,7 +257,7 @@ div.container {
     text-align: center;
     padding: 20px;
   }
-  div.forth_column_container {
+  section.forth_column_container {
     background-color: rgba(248, 247, 247, 0.945);
     padding: 50px 0;
     div.forth_column {
@@ -280,11 +279,11 @@ div.container {
 
 @media screen and (max-width: 1100px) {
   div.container {
-    margin-top: 80px;
+    margin-top: 20px;
     animation-duration: 250ms;
     overflow: hidden;
 
-    div.first_column {
+    section.first_column {
       width: 75%;
       display: grid;
       grid-template-columns: 70% 30%;
@@ -315,7 +314,7 @@ div.container {
         box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
       }
     }
-    div.second_column {
+    section.second_column {
       div.full_stats {
         width: 85%;
         display: flex;
@@ -411,7 +410,7 @@ div.container {
         }
       }
     }
-    div.third_column {
+    section.third_column {
       width: 90%;
       margin: auto;
       display: flex;
@@ -485,7 +484,7 @@ div.container {
       }
     }
 
-    div.forth_column_container {
+    section.forth_column_container {
       background-color: rgba(248, 247, 247, 0.945);
       padding: 50px 0;
       margin-bottom: 30px;
@@ -513,362 +512,213 @@ div.container {
   }
 }
 
-// @media screen and (max-width: 1230px) {
-//   div.container {
-//     overflow-x: hidden;
-//     div.first_column {
-//       width: 75%;
-//       div.title {
-//         h1 {
-//           font-size: 60px;
-//           width: 500px;
-//         }
-//         p {
-//           font-size: 17px;
-//         }
-//       }
-//       img {
-//         width: 300px;
-//       }
-//     }
-//     div.second_column {
-//       height: 900px;
-//       div.full_stats {
-//         h3 {
-//           font-size: 14px;
-//           margin-left: 1vh;
-//         }
-//         div.stats {
-//           span.block {
-//             i {
-//               font-size: 20px;
-//             }
-//             h1 {
-//               font-size: 25px;
-//             }
+@media screen and (max-width: 750px) {
+  div.container {
+    margin-top: 10px;
+    animation-duration: 250ms;
+    overflow: hidden;
 
-//             h4 {
-//               font-size: 12px;
-//             }
-//           }
-//         }
-//       }
+    section.second_column {
+      div.full_stats {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        h3 {
+          font-size: 18px;
+          width: 60%;
+          margin-top: 40px;
+          margin-bottom: 50px;
+          color: #ffffffcb;
+        }
+        div.stats {
+          display: grid;
+          width: 60%;
+          grid-template-columns: 33% 33% 33%;
+          text-align: center;
+          margin-bottom: 60px;
+          font-size: 12px;
+          span.block {
+            i {
+              color: rgb(235, 142, 54);
+              font-weight: 300;
+              font-size: 20px;
+            }
+            h1 {
+              font-family: italic;
+              color: white;
+              margin-top: 0px;
+            }
 
-//       div.coffeemachine {
-//         grid-template-columns: 60% 40%;
-//         img {
-//           width: 400px;
-//         }
-//         p.ourcoffee {
-//         }
-//         h1 {
-//           width: 400px;
-//           font-family: italic;
-//           font-size: 35px;
-//         }
-//         p {
-//         }
-//         div.typesofcoffee {
-//           a {
-//             h2 {
-//               &:hover {
-//               }
-//             }
-//           }
-//         }
-//         a.menu {
-//           transition: 0.4s;
-//           &:hover {
-//           }
-//         }
-//       }
-//     }
-//     div.third_column {
-//       grid-template-columns: 35% 70%;
-//       margin-bottom: 200px;
-//       div.reviews {
-//         h2 {
-//         }
-//         h1 {
-//           font-size: 30px;
-//         }
-//         h5 {
-//         }
-//       }
-//       div.block_reviews {
-//         width: 450px;
+            h4 {
+              color: #ffffffcb;
+              font-family: italic;
+              font-size: 10px;
+            }
+          }
+        }
+      }
 
-//         h3 {
-//         }
-//         div.next {
-//           h4 {
-//           }
-//           button {
-//             i {
-//               &:hover {
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//     div.forth_column {
-//       margin-bottom: 100px;
-//     }
-//   }
-// }
+      div.coffeemachine {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        img {
+          border: 4px solid #f3f4f9;
+          display: flex;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          justify-content: right;
+          color: #ffffff;
+          box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
+        }
+        p.ourcoffee {
+          color: #ffaf1bea;
+          font-family: italic;
+          font-size: 20px;
+          margin: 0;
+          width: 100%;
+        }
+        h1 {
+          font-family: italic;
+          font-size: 30px;
+          color: #ffffff;
+          width: 100%;
+        }
+        p {
+          width: 100%;
+          color: #ffffff;
+        }
+        div.typesofcoffee {
+          display: grid;
+          grid-template-columns: 33% 34% 33%;
+          place-items: center;
+          margin: 0;
+          a {
+            h2 {
+              font-family: italic;
+              color: #ffffff;
+              transition: 0.7s;
+              margin-bottom: 35px;
+              margin: 20px 0;
+              font-size: 20px;
+              &:hover {
+                color: #ffaf1bea;
+              }
+            }
+          }
+        }
+        a.menu {
+          color: white;
+          font-weight: 500;
+          font-size: 20px;
+          transition: 0.4s;
+          &:hover {
+            color: #ffaf1bea;
+          }
+        }
+      }
+    }
+    section.third_column {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      margin-top: 100px;
+      flex-direction: column;
+      margin-bottom: 100px;
+      div.reviews {
+        text-align: center;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 40px;
 
-// @media screen and (max-width: 1000px) {
-//   div.container {
-//     margin-top: 80px;
-//     overflow-x: hidden;
+        h2 {
+          color: #e0bf04ab;
+          font-family: italic;
+          margin-bottom: 0px;
+        }
+        h1 {
+          margin-top: 10px;
+        }
+        h5 {
+          width: 60%;
+          margin: auto;
+          color: #000000b0;
+        }
+      }
+      div.block_reviews {
+        width: 80%;
+        height: 250px;
+        border: 1px solid black;
+        margin: auto;
+        background-color: rgba(19, 18, 18, 0.945);
+        display: grid;
+        grid-template-rows: 75% 35%;
+        border: 4px solid #f3f4f9;
+        box-shadow: 0 0 4px 0;
 
-//     div.first_column {
-//       margin-bottom: 50px;
-//       width: 80%;
-//       div.title {
-//         h1 {
-//           font-size: 40px;
-//           width: 300px;
-//         }
-//         p {
-//           font-size: 17px;
-//         }
-//       }
-//       img {
-//         width: 250px;
-//       }
-//     }
-//     div.second_column {
-//       height: 80vh;
-//       div.full_stats {
-//         h3 {
-//           font-size: 14px;
-//           margin-left: 1vh;
-//         }
-//         div.stats {
-//           span.block {
-//             i {
-//               font-size: 20px;
-//             }
-//             h1 {
-//               font-size: 25px;
-//             }
+        h3 {
+          color: #ffffffee;
+          font-family: italic;
+          padding: 25px;
+          word-spacing: 2px;
+          letter-spacing: 1px;
+          line-height: 25px;
+          font-size: 12px;
+        }
+        div.next {
+          display: grid;
+          grid-template-columns: 40% 60%;
+          h4 {
+            color: #ffffffee;
+            font-family: italic;
+            padding-left: 20px;
+          }
+          button {
+            margin: auto;
+            margin-right: 30px;
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+            background-color: inherit;
+            i {
+              color: white;
+              font-size: 20px;
+              transition: 0.2s;
+              &:hover {
+                font-size: 26px;
+              }
+            }
+          }
+        }
+      }
+    }
 
-//             h4 {
-//               font-size: 12px;
-//             }
-//           }
-//         }
-//       }
+    section.forth_column_container {
+      background-color: rgba(248, 247, 247, 0.945);
+      padding: 50px 0;
+      margin-bottom: 30px;
+      h2[id="map"] {
+        font-family: italic;
+        margin-bottom: 20px;
+        width: 85%;
+        margin: auto;
+        text-align: center;
+        padding: 20px;
+      }
+      div.forth_column {
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
 
-//       div.coffeemachine {
-//         grid-template-columns: 60% 40%;
-//         img {
-//           margin-top: 120px;
-//           width: 300px;
-//         }
-//         p.ourcoffee {
-//         }
-//         h1 {
-//           width: 300px;
-//           font-family: italic;
-//           font-size: 25px;
-//         }
-//         p {
-//           width: 300px;
-//         }
-//         div.typesofcoffee {
-//           a {
-//             h2 {
-//               font-size: 20px;
-//               &:hover {
-//               }
-//             }
-//           }
-//         }
-//         a.menu {
-//           font-size: 15px;
-//           transition: 0.4s;
-//           &:hover {
-//           }
-//         }
-//       }
-//     }
-//     div.third_column {
-//       height: 40vh;
-//       width: 75%;
-//       display: flex;
-//       flex-direction: column;
-
-//       div.reviews {
-//         text-align: center;
-//         h2 {
-//         }
-//         h1 {
-//           font-size: 20px;
-//         }
-//         h5 {
-//           width: 100%;
-//         }
-//       }
-//       div.block_reviews {
-//         width: 450px;
-//         margin-left: 0px;
-//         margin-top: 0px;
-//         margin: auto;
-//         h3 {
-//         }
-//         div.next {
-//           h4 {
-//           }
-//           button {
-//             i {
-//               &:hover {
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//     div.forth_column {
-//       text-align: center;
-//     }
-//   }
-// }
-
-// @media screen and (max-width: 720px) {
-//   div.container {
-//     margin-top: 15px;
-
-//     div.first_column {
-//       width: 85%;
-//       grid-template-columns: 50% 30%;
-
-//       div.title {
-//         h1 {
-//           font-size: 30px;
-//           width: 150px;
-//           font-weight: 500;
-//           margin-top: 40px;
-//         }
-//         p {
-//           font-size: 13px;
-//         }
-//       }
-//       img {
-//         margin-top: 35px;
-//         width: 185px;
-//       }
-//     }
-//     div.second_column {
-//       margin-top: 60px;
-//       height: 225vw;
-
-//       div.full_stats {
-//         width: 90%;
-
-//         h3 {
-//           font-size: 14px;
-//           text-align: center;
-//         }
-//         div.stats {
-//           grid-template-columns: 33% 33% 33%;
-//           span.block {
-//             i {
-//             }
-//             h1 {
-//             }
-
-//             h4 {
-//             }
-//           }
-//         }
-//       }
-
-//       div.coffeemachine {
-//         display: flex;
-//         flex-direction: column;
-//         img {
-//           width: 270px;
-//           margin: auto;
-//           margin-top: 40px;
-//         }
-//         p.ourcoffee {
-//           margin-top: 40px;
-//           font-size: 14px;
-//         }
-//         h1 {
-//           font-size: 20px;
-//         }
-//         p {
-//           font-size: 13px;
-//         }
-//         div.typesofcoffee {
-//           display: flex;
-//           a {
-//             h2 {
-//               font-size: 17px;
-//               margin-right: 25px;
-//               &:hover {
-//                 color: #ffaf1bea;
-//                 transform: scale(130%);
-//               }
-//             }
-//           }
-//         }
-//         a.menu {
-//           &:hover {
-//           }
-//         }
-//       }
-//     }
-//     div.third_column {
-//       height: 140vw;
-//       display: flex;
-//       div.reviews {
-//         margin-top: 50px;
-//         h2 {
-//           border-bottom: 1px solid black;
-//           padding-bottom: 10px;
-//         }
-//         h1 {
-//         }
-//         h5 {
-//         }
-//       }
-//       div.block_reviews {
-//         width: 310px;
-
-//         h3 {
-//           font-size: 14px;
-//         }
-//         div.next {
-//           h4 {
-//             font-size: 14px;
-//           }
-//           button {
-//             i {
-//               &:hover {
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//     div.forth_column {
-//       margin-top: -120px;
-//       margin-bottom: 40px;
-//       height: 350px;
-//       h2 {
-//       }
-
-//       div.map {
-//       }
-//     }
-//   }
-//   div.footer {
-//     margin: 10px;
-//     margin-top: 50px;
-//   }
-// }
+        div.mapstyle {
+          width: 100%;
+          height: 300px;
+        }
+      }
+    }
+  }
+}

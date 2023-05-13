@@ -3,10 +3,30 @@ div.background_page {
     margin: auto;
     width: 920px;
     margin-top: 20px;
-  }
-  div.footer {
-    margin-top: 70px;
-    margin-bottom: 20px;
+    position: relative;
+    button {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.761);
+      right: 1px;
+      height: 40px;
+      width: 40px;
+      top: calc(50% - 20px);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 300ms;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        color: white;
+        font-size: 17px;
+      }
+      &:hover {
+        transition: 300ms;
+        scale: (1.1);
+      }
+    }
   }
 }
 
@@ -17,6 +37,30 @@ div.background_page {
       margin: auto;
       img {
         width: 100%;
+      }
+      button {
+        height: 30px;
+        width: 30px;
+        top: calc(50% - 15px);
+
+        i {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  div.background_page {
+    div.page {
+      button {
+        height: 20px;
+        width: 20px;
+        top: calc(50% - 10px);
+
+        i {
+          font-size: 8px;
+        }
       }
     }
   }
