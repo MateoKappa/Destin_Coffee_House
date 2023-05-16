@@ -1,14 +1,14 @@
 import styles from "../components/index.module.scss";
 import React from "react";
-import Fade from "react-reveal/fade";
 import mapboxgl from "mapbox-gl";
 import Carousel from "../components/Carousel/carousel";
 import Reviews from "../components/Reviews/reviews";
+
 export default function Home() {
   mapboxgl.accessToken =
     "pk.eyJ1IjoiZGVzdGluY29mZmVlIiwiYSI6ImNsNmkyZXZ2MzA3cjMza3MydzlvNzQ1N28ifQ.DvzoxROTAMSUGAYEwH_egg";
 
-  //review Update
+  // Make custom animation
 
   //Map
   const mapData = [
@@ -63,95 +63,85 @@ export default function Home() {
   }
   return (
     <div className={styles.container}>
-      <Fade down>
-        <section className={styles.first_column}>
-          <div className={styles.title}>
-            <h1>Απολαύστε τον πρωινό σας καφέ!</h1>
-            <p>
-              Έλατε και απολαύστε τον καφέ σας για μια αρχή μιας όμορφης μέρας!
-            </p>
-          </div>
-          <img src="/coffeePour-min.png" />
-        </section>
-      </Fade>
+      <section className={styles.first_column}>
+        <div className={styles.title}>
+          <h1>Απολαύστε τον πρωινό σας καφέ!</h1>
+          <p>
+            Έλατε και απολαύστε τον καφέ σας για μια αρχή μιας όμορφης μέρας!
+          </p>
+        </div>
+        <img src="/coffeePour-min.png" />
+      </section>
       <section className={styles.second_column}>
         <div className={styles.full_stats}>
-          <Fade down>
-            <h3>Επιλέξτε και απολαύστε τον καφέ της επιλογης σου.</h3>
-            <div className={styles.stats}>
-              <span className={styles.block}>
-                <h1>
-                  30 <i className="fa-solid fa-plus"></i>
-                </h1>
-                <h4>Διαφορετικοί καφέδες</h4>
-              </span>
-              <span className={styles.block}>
-                <h1>
-                  20 <i className="fa-solid fa-plus"></i>
-                </h1>
-                <h4>Διαφορετικά Τρόφιμα</h4>
-              </span>
-              <span className={styles.block}>
-                <h1>
-                  15 <i className="fa-solid fa-plus"></i>
-                </h1>
-                <h4>Διαφορετικά Αναψυκτικά</h4>
-              </span>
-            </div>
-          </Fade>
+          <h3>Επιλέξτε και απολαύστε τον καφέ της επιλογης σου.</h3>
+          <div className={styles.stats}>
+            <span className={styles.block}>
+              <h1>
+                30 <i className="fa-solid fa-plus"></i>
+              </h1>
+              <h4>Διαφορετικοί καφέδες</h4>
+            </span>
+            <span className={styles.block}>
+              <h1>
+                20 <i className="fa-solid fa-plus"></i>
+              </h1>
+              <h4>Διαφορετικά Τρόφιμα</h4>
+            </span>
+            <span className={styles.block}>
+              <h1>
+                15 <i className="fa-solid fa-plus"></i>
+              </h1>
+              <h4>Διαφορετικά Αναψυκτικά</h4>
+            </span>
+          </div>
 
           <div className={styles.coffeemachine}>
             <img src="https://i.imgur.com/lYgBIYT.jpg" />
             <div className={styles.text}>
-              <Fade up>
-                <p className={styles.ourcoffee}>Ο Καφες μας</p>
-                <h1> Επιλέξτε τον αγαπημένο σας καφέ!</h1>
-                <p>
-                  Πάνω από 20+ είδη καφέ έτοιμα να παρασκευαστούν από
-                  επαγγελματίες.
-                </p>
-                <div className={styles.typesofcoffee}>
-                  <a href="/menu">
-                    <h2>Espresso</h2>
-                  </a>
-                  <a href="/menu">
-                    <h2>Cappuchino</h2>
-                  </a>
-                  <a href="/menu">
-                    <h2>Frappe</h2>
-                  </a>
-                </div>
-                <a className={styles.menu} href="/">
-                  More Menu
+              <p className={styles.ourcoffee}>Ο Καφες μας</p>
+              <h1> Επιλέξτε τον αγαπημένο σας καφέ!</h1>
+              <p>
+                Πάνω από 20+ είδη καφέ έτοιμα να παρασκευαστούν από
+                επαγγελματίες.
+              </p>
+              <div className={styles.typesofcoffee}>
+                <a href="/menu">
+                  <h2>Espresso</h2>
                 </a>
-              </Fade>
+                <a href="/menu">
+                  <h2>Cappuchino</h2>
+                </a>
+                <a href="/menu">
+                  <h2>Frappe</h2>
+                </a>
+              </div>
+              <a className={styles.menu} href="/">
+                More Menu
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <Fade up>
-        <section className={styles.third_column}>
-          <div className={styles.reviews}>
-            <h2> Οι αξιολογησεις μας!</h2>
-            <h1>
-              Κάποιες απο τις αξιολογήσεις που μας έχουν κάνει οι πελάτες!
-            </h1>
-            <h5>
-              Παρέχουμε πάντα το καλύτερο δυνατό για να κάνουμε τον πελάτη μας
-              ευχαριστημένο με τις υπηρεσίες μας!
-            </h5>
-          </div>
-          <Reviews />
-        </section>
+      <section className={styles.third_column}>
+        <div className={styles.reviews}>
+          <h2> Οι αξιολογησεις μας!</h2>
+          <h1>Κάποιες απο τις αξιολογήσεις που μας έχουν κάνει οι πελάτες!</h1>
+          <h5>
+            Παρέχουμε πάντα το καλύτερο δυνατό για να κάνουμε τον πελάτη μας
+            ευχαριστημένο με τις υπηρεσίες μας!
+          </h5>
+        </div>
+        <Reviews />
+      </section>
 
-        <section className={styles.forth_column_container}>
-          <h2 id="map">Μπορειτε να μας βρειτε:</h2>
-          <div className={styles.forth_column}>
-            <Carousel />
-            <Map />
-          </div>
-        </section>
-      </Fade>
+      <section className={styles.forth_column_container}>
+        <h2 id="map">Μπορειτε να μας βρειτε:</h2>
+        <div className={styles.forth_column}>
+          <Carousel />
+          <Map />
+        </div>
+      </section>
     </div>
   );
 }

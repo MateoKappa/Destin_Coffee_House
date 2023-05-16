@@ -32,6 +32,7 @@ div.background_page {
 
 @media screen and (max-width: 1100px) {
   div.background_page {
+    min-height: 75vh;
     div.page {
       width: 98%;
       margin: auto;
